@@ -87,10 +87,13 @@
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JTabbedPane" name="jtpRandomNumbers">
+          <Events>
+            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jtpRandomNumbersMousePressed"/>
+          </Events>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Component class="views.jpBasic" name="jpBasic1">
+            <Component class="views.jpBasic" name="jpBasic">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="B&#xe1;sico">
@@ -104,6 +107,15 @@
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Cong. Lineal">
                     <Property name="tabTitle" type="java.lang.String" value="Cong. Lineal"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="views.jpMiddleSquare" name="jpMiddleSquare1">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Middle Square">
+                    <Property name="tabTitle" type="java.lang.String" value="Middle Square"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>

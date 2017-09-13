@@ -41,10 +41,10 @@ public class LinearCongruity {
 
         for (int i = 0; i < n; i++) {
             xn = ((this.a * xn) + b) % this.m;
-            XR.setText(XR.getText() + "X" + (i+1) + ": " + xn + "\n");
+            XR.setText(XR.getText() + "X" + (i + 1) + ": " + xn + "\n");
 
             un = xn / this.m;
-            UR.setText(UR.getText() + "U" + (i+1) + ": " + un + "\n");
+            UR.setText(UR.getText() + "U" + (i + 1) + ": " + un + "\n");
         }
     }
 }

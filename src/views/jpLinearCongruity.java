@@ -12,6 +12,7 @@ import randomNumbers.LinearCongruity;
  * @author hasty
  */
 public class jpLinearCongruity extends javax.swing.JPanel {
+
     private LinearCongruity lc;
 
     /**
@@ -181,13 +182,12 @@ public class jpLinearCongruity extends javax.swing.JPanel {
     private void jBGetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGetMousePressed
         // TODO add your handling code here:
         lc = new LinearCongruity();
-        //public void getNumbers(Double X0, int n, Double a, Double b, Double m, JTextArea XR, JTextArea UR) {
-        lc.getNumbers(Double.parseDouble(jTFX0.getText()), 
-                Integer.parseInt(jTFN.getText()), 
-                Double.parseDouble(jTFA.getText()), 
-                Double.parseDouble(jTFB.getText()), 
-                Double.parseDouble(jTFM.getText()), 
-                jTAXR, 
+        lc.getNumbers(Double.parseDouble(jTFX0.getText()),
+                Integer.parseInt(jTFN.getText()),
+                Double.parseDouble(jTFA.getText()),
+                Double.parseDouble(jTFB.getText()),
+                Double.parseDouble(jTFM.getText()),
+                jTAXR,
                 jTAUR);
     }//GEN-LAST:event_jBGetMousePressed
 

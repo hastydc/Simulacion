@@ -41,8 +41,9 @@ public class mainFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jtpRandomNumbers = new javax.swing.JTabbedPane();
-        jpBasic1 = new views.jpBasic();
+        jpBasic = new views.jpBasic();
         jpLinearCongruity1 = new views.jpLinearCongruity();
+        jpMiddleSquare1 = new views.jpMiddleSquare();
         Test = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -53,8 +54,14 @@ public class mainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1300, 600));
 
-        jtpRandomNumbers.addTab("Básico", jpBasic1);
+        jtpRandomNumbers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jtpRandomNumbersMousePressed(evt);
+            }
+        });
+        jtpRandomNumbers.addTab("Básico", jpBasic);
         jtpRandomNumbers.addTab("Cong. Lineal", jpLinearCongruity1);
+        jtpRandomNumbers.addTab("Middle Square", jpMiddleSquare1);
 
         Test.addTab("tab1", jTabbedPane1);
         Test.addTab("tab2", jTabbedPane2);
@@ -122,6 +129,10 @@ public class mainFrame extends javax.swing.JFrame {
         jtpRandomNumbers.setVisible(true);
     }//GEN-LAST:event_jmRandomNumbersMousePressed
 
+    private void jtpRandomNumbersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpRandomNumbersMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtpRandomNumbersMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -170,8 +181,9 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JMenu jmRandomNumbers;
-    private views.jpBasic jpBasic1;
+    private views.jpBasic jpBasic;
     private views.jpLinearCongruity jpLinearCongruity1;
+    private views.jpMiddleSquare jpMiddleSquare1;
     private javax.swing.JTabbedPane jtpRandomNumbers;
     // End of variables declaration//GEN-END:variables
 
