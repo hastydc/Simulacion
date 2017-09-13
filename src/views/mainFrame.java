@@ -41,8 +41,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jtpRandomNumbers = new javax.swing.JTabbedPane();
-        jpMiddleSquare = new views.jpMiddleSquare();
-        jPanel2 = new javax.swing.JPanel();
+        jpBasic1 = new views.jpBasic();
+        jpLinearCongruity1 = new views.jpLinearCongruity();
         Test = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -53,20 +53,8 @@ public class mainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1300, 600));
 
-        jtpRandomNumbers.addTab("Middle Square", jpMiddleSquare);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 547, Short.MAX_VALUE)
-        );
-
-        jtpRandomNumbers.addTab("tab2", jPanel2);
+        jtpRandomNumbers.addTab("Básico", jpBasic1);
+        jtpRandomNumbers.addTab("Cong. Lineal", jpLinearCongruity1);
 
         Test.addTab("tab1", jTabbedPane1);
         Test.addTab("tab2", jTabbedPane2);
@@ -179,11 +167,11 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JMenu jmRandomNumbers;
-    private views.jpMiddleSquare jpMiddleSquare;
+    private views.jpBasic jpBasic1;
+    private views.jpLinearCongruity jpLinearCongruity1;
     private javax.swing.JTabbedPane jtpRandomNumbers;
     // End of variables declaration//GEN-END:variables
 

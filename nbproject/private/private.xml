@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/proweb/paginacion/normal/java/Simulation/src/views/jpMiddleSquare.java</file>
-            <file>file:/C:/xampp/htdocs/proweb/paginacion/normal/java/Simulation/src/randomNumbers/MiddleSquare.java</file>
-            <file>file:/C:/xampp/htdocs/proweb/paginacion/normal/java/Simulation/src/views/mainFrame.java</file>
-            <file>file:/C:/xampp/htdocs/proweb/paginacion/normal/java/Simulation/src/simulation/Simulation.java</file>
+            <file>file:/home/hasty/Development/Simulacion/src/views/jpBasic.java</file>
+            <file>file:/home/hasty/Development/Simulacion/src/randomNumbers/LinearCongruity.java</file>
+            <file>file:/home/hasty/Development/Simulacion/src/views/jpLinearCongruity.java</file>
+            <file>file:/home/hasty/Development/Simulacion/src/views/mainFrame.java</file>
         </group>
     </open-files>
 </project-private>
