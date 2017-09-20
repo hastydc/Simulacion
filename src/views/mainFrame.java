@@ -44,6 +44,7 @@ public class mainFrame extends javax.swing.JFrame {
         jpBasic = new views.jpBasic();
         jpLinearCongruity1 = new views.jpLinearCongruity();
         jpMiddleSquare1 = new views.jpMiddleSquare();
+        jpWichmannHill1 = new views.jpWichmannHill();
         Test = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -52,7 +53,6 @@ public class mainFrame extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1300, 600));
 
         jtpRandomNumbers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -62,6 +62,7 @@ public class mainFrame extends javax.swing.JFrame {
         jtpRandomNumbers.addTab("Básico", jpBasic);
         jtpRandomNumbers.addTab("Cong. Lineal", jpLinearCongruity1);
         jtpRandomNumbers.addTab("Middle Square", jpMiddleSquare1);
+        jtpRandomNumbers.addTab("Wichmann y Hill", jpWichmannHill1);
 
         Test.addTab("tab1", jTabbedPane1);
         Test.addTab("tab2", jTabbedPane2);
@@ -184,6 +185,7 @@ public class mainFrame extends javax.swing.JFrame {
     private views.jpBasic jpBasic;
     private views.jpLinearCongruity jpLinearCongruity1;
     private views.jpMiddleSquare jpMiddleSquare1;
+    private views.jpWichmannHill jpWichmannHill1;
     private javax.swing.JTabbedPane jtpRandomNumbers;
     // End of variables declaration//GEN-END:variables
 
