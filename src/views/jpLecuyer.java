@@ -5,12 +5,14 @@
  */
 package views;
 
+import randomNumbers.Lecuyer;
+
 /**
  *
  * @author Usuario
  */
 public class jpLecuyer extends javax.swing.JPanel {
-
+    private Lecuyer lc;
     /**
      * Creates new form jpLecuyer
      */
@@ -27,19 +29,215 @@ public class jpLecuyer extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTFX0 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTAYR = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        jTFY0 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTAUR = new javax.swing.JTextArea();
+        jTFN = new javax.swing.JTextField();
+        jBGet = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTAXR = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTAZR = new javax.swing.JTextArea();
+
+        setPreferredSize(new java.awt.Dimension(900, 500));
+
+        jTFX0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFX0ActionPerformed(evt);
+            }
+        });
+
+        jTAYR.setColumns(20);
+        jTAYR.setRows(5);
+        jScrollPane2.setViewportView(jTAYR);
+
+        jLabel10.setText("U:");
+
+        jTFY0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFY0ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("(Y0):");
+
+        jTAUR.setColumns(20);
+        jTAUR.setRows(5);
+        jScrollPane3.setViewportView(jTAUR);
+
+        jTFN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFNActionPerformed(evt);
+            }
+        });
+
+        jBGet.setText("Generar");
+        jBGet.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jBGetMousePressed(evt);
+            }
+        });
+        jBGet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBGetActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("(X0):");
+
+        jLabel6.setText("Resultados:");
+
+        jLabel2.setText("(n) Iteraciones:");
+
+        jLabel7.setText("X:");
+
+        jLabel8.setText("Y:");
+
+        jTAXR.setColumns(20);
+        jTAXR.setRows(5);
+        jScrollPane1.setViewportView(jTAXR);
+
+        jLabel9.setText("Z:");
+
+        jTAZR.setColumns(20);
+        jTAZR.setRows(5);
+        jScrollPane4.setViewportView(jTAZR);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBGet)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTFX0, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFY0, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFN, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTFX0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTFY0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel9)
+                        .addComponent(jLabel10)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jBGet))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTFN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)))))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTFX0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFX0ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFX0ActionPerformed
+
+    private void jTFY0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFY0ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFY0ActionPerformed
+
+    private void jTFNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFNActionPerformed
+
+    private void jBGetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGetMousePressed
+        // TODO add your handling code here
+        lc = new Lecuyer();
+
+        lc.getNumbers(Integer.parseInt(jTFN.getText()),
+            Integer.parseInt(jTFX0.getText()),
+            Integer.parseInt(jTFY0.getText()),
+            jTAXR, jTAYR, jTAZR, jTAUR);
+    }//GEN-LAST:event_jBGetMousePressed
+
+    private void jBGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBGetActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBGet;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTAUR;
+    private javax.swing.JTextArea jTAXR;
+    private javax.swing.JTextArea jTAYR;
+    private javax.swing.JTextArea jTAZR;
+    private javax.swing.JTextField jTFN;
+    private javax.swing.JTextField jTFX0;
+    private javax.swing.JTextField jTFY0;
     // End of variables declaration//GEN-END:variables
 }

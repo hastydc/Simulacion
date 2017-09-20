@@ -40,11 +40,17 @@ public class jpWichmannHill extends javax.swing.JPanel {
         jTAXR = new javax.swing.JTextArea();
         jTFX0 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTAUR = new javax.swing.JTextArea();
+        jTAYR = new javax.swing.JTextArea();
         jTFY0 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTFZ0 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTAUR = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTAZR = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(900, 500));
 
@@ -74,7 +80,7 @@ public class jpWichmannHill extends javax.swing.JPanel {
 
         jLabel7.setText("X:");
 
-        jLabel8.setText("U:");
+        jLabel8.setText("Y:");
 
         jTAXR.setColumns(20);
         jTAXR.setRows(5);
@@ -86,9 +92,9 @@ public class jpWichmannHill extends javax.swing.JPanel {
             }
         });
 
-        jTAUR.setColumns(20);
-        jTAUR.setRows(5);
-        jScrollPane2.setViewportView(jTAUR);
+        jTAYR.setColumns(20);
+        jTAYR.setRows(5);
+        jScrollPane2.setViewportView(jTAYR);
 
         jTFY0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +111,18 @@ public class jpWichmannHill extends javax.swing.JPanel {
         });
 
         jLabel4.setText("(Z0):");
+
+        jTAUR.setColumns(20);
+        jTAUR.setRows(5);
+        jScrollPane3.setViewportView(jTAUR);
+
+        jLabel9.setText("Z:");
+
+        jTAZR.setColumns(20);
+        jTAZR.setRows(5);
+        jScrollPane4.setViewportView(jTAZR);
+
+        jLabel10.setText("U:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -139,11 +157,19 @@ public class jpWichmannHill extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -155,13 +181,10 @@ public class jpWichmannHill extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel8)
                         .addComponent(jLabel7)
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel9)
+                        .addComponent(jLabel10)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -172,8 +195,15 @@ public class jpWichmannHill extends javax.swing.JPanel {
                             .addComponent(jTFN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBGet)))
-                .addContainerGap(271, Short.MAX_VALUE))
+                        .addComponent(jBGet))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -181,12 +211,11 @@ public class jpWichmannHill extends javax.swing.JPanel {
         // TODO add your handling code here
         wh = new WichmannHill();
         
-        wh.getNumbers(
-                Integer.parseInt(jTFN.getText()), 
+        wh.getNumbers(Integer.parseInt(jTFN.getText()), 
                 Integer.parseInt(jTFX0.getText()), 
                 Integer.parseInt(jTFY0.getText()), 
                 Integer.parseInt(jTFZ0.getText()), 
-                jTAXR, jTAUR);
+                jTAXR, jTAYR, jTAZR, jTAUR);
     }//GEN-LAST:event_jBGetMousePressed
 
     private void jBGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGetActionPerformed
@@ -213,16 +242,22 @@ public class jpWichmannHill extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBGet;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTAUR;
     private javax.swing.JTextArea jTAXR;
+    private javax.swing.JTextArea jTAYR;
+    private javax.swing.JTextArea jTAZR;
     private javax.swing.JTextField jTFN;
     private javax.swing.JTextField jTFX0;
     private javax.swing.JTextField jTFY0;
