@@ -5,6 +5,8 @@
  */
 package randomNumbers;
 
+import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JTextArea;
 
 /**
@@ -46,5 +48,25 @@ public class LinearCongruity {
             un = xn / this.m;
             UR.setText(UR.getText() + "U" + (i + 1) + ": " + un + "\n");
         }
+    }
+
+    public ArrayList<Integer> get100Numbers(int limit) {
+        Random rnd = new Random();
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        this.n = 100;
+        this.a = 4014.0;
+        this.b = 18.0;
+        this.m = 397.0;
+        Double xn = Double.parseDouble((rnd.nextInt(100) + 600) + "");
+
+        do {
+            xn = ((this.a * xn) + b) % this.m;
+            if (xn < limit) {
+                numbers.add(xn.intValue());
+            }
+        } while (numbers.size() < n);
+
+        return numbers;
     }
 }

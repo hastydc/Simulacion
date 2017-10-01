@@ -47,6 +47,7 @@ public class mainFrame extends javax.swing.JFrame {
         jpWichmannHill1 = new views.jpWichmannHill();
         jpLecuyer1 = new views.jpLecuyer();
         jpFibonacci1 = new views.jpFibonacci();
+        jpImage1 = new views.jpImage();
         Test = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -61,12 +62,13 @@ public class mainFrame extends javax.swing.JFrame {
                 jtpRandomNumbersMousePressed(evt);
             }
         });
-        jtpRandomNumbers.addTab("Básico", jpBasic);
+        jtpRandomNumbers.addTab("Basic", jpBasic);
         jtpRandomNumbers.addTab("Cong. Lineal", jpLinearCongruity1);
         jtpRandomNumbers.addTab("Middle Square", jpMiddleSquare1);
         jtpRandomNumbers.addTab("Wichmann y Hill", jpWichmannHill1);
         jtpRandomNumbers.addTab("L'Ecuyer", jpLecuyer1);
         jtpRandomNumbers.addTab("Fibonacci", jpFibonacci1);
+        jtpRandomNumbers.addTab("Image", jpImage1);
 
         Test.addTab("tab1", jTabbedPane1);
         Test.addTab("tab2", jTabbedPane2);
@@ -188,6 +190,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jmRandomNumbers;
     private views.jpBasic jpBasic;
     private views.jpFibonacci jpFibonacci1;
+    private views.jpImage jpImage1;
     private views.jpLecuyer jpLecuyer1;
     private views.jpLinearCongruity jpLinearCongruity1;
     private views.jpMiddleSquare jpMiddleSquare1;

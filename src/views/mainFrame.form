@@ -93,8 +93,8 @@
             <Component class="views.jpBasic" name="jpBasic">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="B&#xe1;sico">
-                    <Property name="tabTitle" type="java.lang.String" value="B&#xe1;sico"/>
+                  <JTabbedPaneConstraints tabName="Basic">
+                    <Property name="tabTitle" type="java.lang.String" value="Basic"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -140,6 +140,15 @@
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="Fibonacci">
                     <Property name="tabTitle" type="java.lang.String" value="Fibonacci"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="views.jpImage" name="jpImage1">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Image">
+                    <Property name="tabTitle" type="java.lang.String" value="Image"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
