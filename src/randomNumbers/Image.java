@@ -6,11 +6,13 @@
 package randomNumbers;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
@@ -23,14 +25,14 @@ public class Image {
 
     }
 
-    public void getPercentage(File file, JLabel R) throws IOException {
+    public void getPercentage(File file, JLabel JLR, JLabel JLI) throws IOException {
         LinearCongruity lc = new LinearCongruity();
         BufferedImage img = ImageIO.read(file);
-        
+
         int width = img.getWidth();
         int height = img.getHeight();
         int percentage = 0;
-        
+
         String[][] map = new String[width][height];
         ArrayList<Integer> numbersX = lc.get100Numbers(width);
         ArrayList<Integer> numbersY = lc.get100Numbers(height);
@@ -44,12 +46,17 @@ public class Image {
                 map[i][j] = ((color & 0xff0000) >> 16) + "," + ((color & 0xff00) >> 8) + "," + (color & 0xff);
             }
         }
-        
+
         for (int i = 0; i < 100; i++) {
-            if((map[numbersX.get(i)][numbersY.get(i)] ).equalsIgnoreCase("0,0,0")) {
+            img.setRGB(numbersX.get(i), numbersY.get(i), (new Color(255, 0, 0).getRGB()));
+            if ((map[numbersX.get(i)][numbersY.get(i)]).equalsIgnoreCase("0,0,0")) {
                 percentage++;
             }
         }
-        R.setText("El " + percentage + "% de coordenadas aleatorias generadas están sobre el área negra.");
+        
+        ImageIcon display = new ImageIcon(img);
+        JLI.setIcon(display);
+
+        JLR.setText("El " + percentage + "% de coordenadas aleatorias generadas están sobre el área negra.");
     }
 }

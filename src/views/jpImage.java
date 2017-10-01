@@ -39,6 +39,7 @@ public class jpImage extends javax.swing.JPanel {
         jfChooser = new javax.swing.JFileChooser();
         jButton1 = new javax.swing.JButton();
         jlResponse = new javax.swing.JLabel();
+        jlI = new javax.swing.JLabel();
 
         jfFile.setTitle("Seleccionar la imagen");
         jfFile.setMinimumSize(new java.awt.Dimension(623, 397));
@@ -86,13 +87,14 @@ public class jpImage extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlResponse, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(0, 757, Short.MAX_VALUE))
-                    .addComponent(jlResponse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 757, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -102,7 +104,9 @@ public class jpImage extends javax.swing.JPanel {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jlResponse)
-                .addContainerGap(434, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlI, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -117,7 +121,7 @@ public class jpImage extends javax.swing.JPanel {
             try {
                 jfFile.hide();
                 img = new Image();
-                img.getPercentage(jfChooser.getSelectedFile(), jlResponse);
+                img.getPercentage(jfChooser.getSelectedFile(), jlResponse, jlI);
             } catch (IOException ex) {
                 Logger.getLogger(jpImage.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -130,6 +134,7 @@ public class jpImage extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JFileChooser jfChooser;
     private javax.swing.JFrame jfFile;
+    private javax.swing.JLabel jlI;
     private javax.swing.JLabel jlResponse;
     // End of variables declaration//GEN-END:variables
 }
