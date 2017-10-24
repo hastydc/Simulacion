@@ -7,7 +7,10 @@ package randomNumbers;
 
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.JLabel;
 import javax.swing.JTextArea;
+import tests.Tests;
+import views.jpLinearCongruity;
 
 /**
  *
@@ -20,6 +23,7 @@ public class LinearCongruity {
     private Double a;
     private Double b;
     private Double m;
+    private Tests tests;
 
     public LinearCongruity() {
         this.X0 = 0.0;
@@ -27,9 +31,15 @@ public class LinearCongruity {
         this.a = 0.0;
         this.b = 0.0;
         this.m = 0.0;
+        tests = new Tests();
     }
 
-    public void getNumbers(Double X0, int n, Double a, Double b, Double m, JTextArea XR, JTextArea UR) {
+    public void getNumbers(Double X0, int n, Double a, Double b, Double m, 
+            JTextArea XR, JTextArea UR, 
+            JLabel jlAverage, JLabel jlAvLInf, JLabel jlAvLSup, JLabel jlAvResponse,
+            //JLabel jlVar, JLabel jlVarLInf, JLabel jlVarLSup, JLabel jlVarResponse,
+            JLabel jlChiInt, JLabel jlChiEi, JLabel jlChiSum, JLabel jlChiGL, JLabel jlChiResponse
+    ) {
         this.X0 = X0;
         this.n = n;
         this.a = a;
@@ -37,6 +47,8 @@ public class LinearCongruity {
         this.m = m;
         Double xn = this.X0;
         Double un = 0.0;
+        Double average = 0.0;
+        double[] numbers = new double[n];
 
         XR.setText("X0: " + X0 + "\n");
         UR.setText("\n");
@@ -46,8 +58,14 @@ public class LinearCongruity {
             XR.setText(XR.getText() + "X" + (i + 1) + ": " + xn + "\n");
 
             un = xn / this.m;
+            average = Double.sum(average, un);
+            numbers[i] = un;
             UR.setText(UR.getText() + "U" + (i + 1) + ": " + un + "\n");
         }
+
+        tests.average(n, (average / n), jlAverage, jlAvLInf, jlAvLSup, jlAvResponse);
+        //tests.variance(n, (average / n), jlVar, jlVarLInf, jlVarLSup, jlVarResponse);
+        tests.chiSquareF(n, numbers, jlChiInt, jlChiEi, jlChiSum, jlChiGL, jlChiResponse);
     }
 
     public ArrayList<Integer> get100Numbers(int limit) {
