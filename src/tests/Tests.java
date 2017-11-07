@@ -8,9 +8,6 @@ package tests;
 
 
 import javax.swing.JLabel;
-import org.apache.commons.math3.*;
-import org.apache.commons.math3.stat.inference.ChiSquareTest;
-import org.apache.commons.math3.stat.inference.TestUtils;
 
 
 /**

@@ -48,6 +48,7 @@ public class mainFrame extends javax.swing.JFrame {
         jpLecuyer1 = new views.jpLecuyer();
         jpFibonacci1 = new views.jpFibonacci();
         jpImage1 = new views.jpImage();
+        jpPi1 = new views.jpPi();
         Test = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -69,6 +70,7 @@ public class mainFrame extends javax.swing.JFrame {
         jtpRandomNumbers.addTab("L'Ecuyer", jpLecuyer1);
         jtpRandomNumbers.addTab("Fibonacci", jpFibonacci1);
         jtpRandomNumbers.addTab("Image", jpImage1);
+        jtpRandomNumbers.addTab("Pi", jpPi1);
 
         Test.addTab("tab1", jTabbedPane1);
         Test.addTab("tab2", jTabbedPane2);
@@ -194,6 +196,7 @@ public class mainFrame extends javax.swing.JFrame {
     private views.jpLecuyer jpLecuyer1;
     private views.jpLinearCongruity jpLinearCongruity1;
     private views.jpMiddleSquare jpMiddleSquare1;
+    private views.jpPi jpPi1;
     private views.jpWichmannHill jpWichmannHill1;
     private javax.swing.JTabbedPane jtpRandomNumbers;
     // End of variables declaration//GEN-END:variables

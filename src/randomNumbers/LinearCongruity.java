@@ -87,4 +87,25 @@ public class LinearCongruity {
 
         return numbers;
     }
+    
+    public ArrayList<Integer> getNNumbers(int limit) {
+        Random rnd = new Random();
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        this.n = 100;
+        this.a = 4014.0;
+        this.b = 18.0;
+        this.m = 397.0;
+        Double xn = Double.parseDouble((rnd.nextInt(100) + 600) + "");
+
+        do {
+            xn = ((this.a * xn) + b) % this.m;
+            if (xn < limit) {
+                numbers.add(xn.intValue());
+            }
+        } while (numbers.size() < n);
+
+        return numbers;
+    }
 }
+
